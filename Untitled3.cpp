@@ -1,18 +1,19 @@
 #include <stdio.h>
-
 int main() {
-    int num; 
-    printf("Nhap 5 so nguyên:\n");
-    for (int i = 1; i <= 5; i++) {
-        printf("So thu %d: ",i);
-        scanf("%d",&num);
-        if(num % 2 != 0){
-        	printf("so le\n");
-			}
-        	else{
-			printf("so chan\n");
-			}
-		
-}
-        return 0;
+    int numbers[5];
+    int evenCount = 0, oddCount = 0;
+    printf("Nhap vao 5 so nguyen:\n");
+    for (int i = 0; i < 5; ++i) {
+        printf("So thu %d: ", i + 1);
+        scanf("%d", &numbers[i]);
+        if (numbers[i] % 2 == 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
     }
+    printf("So luong so chan: %d\n", evenCount);
+    printf("So luong so le: %d\n", oddCount);
+    return 0;
+}
+
